@@ -16,7 +16,7 @@ app.run(function($ionicPlatform) {
 })
  
 app.constant('ApiEndpoint', {
-  url: 'http://localhost:8100/test/'
+  url: 'http://localhost:8100/hypo'
 })
 
 //--------Routing-------//
