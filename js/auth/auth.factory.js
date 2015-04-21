@@ -18,7 +18,7 @@ app.factory('AuthenticationFactory', function($window){
 app.factory('UserAuthFactory', function($window,$location,$http,AuthenticationFactory){
 	return {
 		register:function(newusername,newpassword,newemail){
-			return $http.post('http://localhost:8100/test/test/user/',{
+			return $http.post('http://kevinnewman.ca/hypo/test/user/',{
 				name:newusername,
 				pass:newpassword,
 				mail:newemail
@@ -26,7 +26,7 @@ app.factory('UserAuthFactory', function($window,$location,$http,AuthenticationFa
 		},
 
 		login:function(username,password){
-			return $http.post('http://localhost:8100/test/test/user/login',{
+			return $http.post('http://kevinnewman.ca/hypo/test/user/login',{
 				username:username,
 				password:password
 			});

@@ -60,7 +60,7 @@ app.controller('DashCtrl', function($scope, UserAuthFactory, dataFactory, $filte
 	};	
 
 	$scope.addSymptom = function () {
-		var postUrlBase = 'http://localhost:8100/test/test/node';
+		var postUrlBase = 'http://kevinnewman.ca/hypo/test/node';
 		var res = $http.post(postUrlBase, dataObj);
 		res.success(function(data, status, headers, config) {
 			$scope.message = data;

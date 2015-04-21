@@ -7,7 +7,7 @@ app.factory('List', function($http, $q) {
 
 
   // var menus = $http.get('http://localhost:8100/test/node?parameters[uid]=1')
-  var menus = $http.get('http://localhost:8100/test/test/node?parameters[uid]=1')
+  var menus = $http.get('http://kevinnewman.ca/hypo/test/node?parameters[uid]=1')
 
   .success(function(data){
     juice = data;
@@ -69,7 +69,7 @@ app.factory('dataFactory', function($http, $window) {
 
     //var getUrlBase = 'http://localhost:8100/test/test/node/5?oauth_consumer_key=' + comsumerKey + '&oauth_signature_method=HMAC-SHA1&oauth_timestamp=' + timestamp + '&oauth_nonce=' + nonce + '&oauth_version=1.0&oauth_signature=' + signature;
     //oauth http://kevinnewman.ca/hypo/test/node/5?oauth_consumer_key=6LfZHf8Wcpr4FGSaQEmL9o7BnkaDcgy5&oauth_signature_method=HMAC-SHA1&oauth_timestamp=1427377724&oauth_nonce=zfhHpD&oauth_version=1.0&oauth_signature=BQaYKap1FKfYWQynARhjIBuNOQY=
-    var getUrlBase = 'http://localhost:8100/test/test/node?parameters[uid]=' + $window.sessionStorage.userId;
+    var getUrlBase = 'http://kevinnewman.ca/hypo/test/node?parameters[uid]=' + $window.sessionStorage.userId;
     //var getUrlBase = 'http://localhost:8100/test/test/articles/' + $window.sessionStorage.userId;
 
   var _symptomFactory = {};
@@ -78,7 +78,7 @@ app.factory('dataFactory', function($http, $window) {
     return $http.get(getUrlBase);
   };
 
-  var postUrlBase = 'http://localhost:8100/test/test/node?parameters[uid]=' + $window.sessionStorage.userId;
+  var postUrlBase = 'http://kevinnewman.ca/hypo/test/node?parameters[uid]=' + $window.sessionStorage.userId;
 
   _symptomFactory.addSymptom = function() {
     return $http.post(postUrlBase, {title:'test1'});
