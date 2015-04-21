@@ -1,0 +1,51 @@
+<ion-view view-title="hypo+">
+	<ion-side-menu-conten class="padding">
+		<div ng-hide="switch">
+			<div class="form-group">
+			<label for="username">Username</label>
+			<input type="text" class="form-control" id="username" placeholder="Username" ng-model="user.username" value="admin">
+			</div>
+
+			<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" class="form-control" id="password" placeholder="Password" ng-model="user.password" value="1zx23cv4">
+			</div>
+
+			<button type="button" ng-click="login()" class="btn btn-icon">Submit</button>
+			<br>
+			<br>
+			<br>
+			<button type="button" ng-click="switch = !switch" class="btn btn-icon">Register?</button>
+		</div>
+
+
+
+
+
+
+
+
+		<div ng-show="switch">
+			<div class="form-group">
+			<label for="username">Name</label>
+			<input type="text" class="form-control" id="usernameRegister" placeholder="Username" ng-model="register.username" value="">
+			</div>
+
+			<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" class="form-control" id="passwordRegister" placeholder="Password" ng-model="register.password" value="">
+			</div>
+
+			<div class="form-group">
+			<label for="password">Email</label>
+			<input type="email" class="form-control" id="emailRegister" placeholder="example@email.com" ng-model="register.email" value="">
+			</div>
+
+			<button type="button" ng-click="register()" class="btn btn-icon">Submit</button>
+			<br>
+			<br>
+			<br>
+			<button type="button" ng-click="switch = !switch" class="btn btn-icon">Login?</button>
+		</div>
+	</ion-content>
+</ion-view>

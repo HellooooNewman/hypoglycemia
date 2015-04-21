@@ -1,0 +1,34 @@
+<ion-view view-title="Symptom Tracking">
+	<ion-nav-buttons side="primary">
+<button type="button" class="btn btn-icon logout" ng-click="logout()" ng-hide="isLogged">Logout</button>
+    </ion-nav-buttons>
+	<ion-content class="padding">
+		<h4>Date</h4>
+            <p class="input-group">
+              <input type="text"  ng-readonly class="form-control" datepicker-popup="EEEE, MMMM d, y" ng-model="$parent.dt" is-open="$parent.opened" max-date="maxDate" datepicker-options="dateOptions" show-button-bar="false" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close"/>
+              <span class="input-group-btn">
+                <button type="button" class="btn btn-icon" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+              </span>
+            </p>
+		<div ng-repeat="symptom in symptoms | filter:dt" class="symptom">
+			<ion-checkbox ng-model="isChecked"></ion-checkbox>
+			<button class="btn btn-clear" popover="{{symptom.created * 1000 | date:'shortTime'}}" popover-trigger="mouseenter">
+				{{symptom.title}}
+				
+			</button>
+		</div>
+
+		<h4>Add Symptom</h4>
+		<div class="list">
+			<label class="item item-input">
+			<input type="text" ng-model="symptom" placeholder="Add notes..."/>
+
+
+			</label>
+			<input type="submit" class="btn btn-icon" ng-click="addSymptom($scope.symptom)" value="Save" />
+
+		</div>
+
+		<button type="button" class="btn btn-icon" ng-click="$parent.dt = mkokmfgkfasgsdgnmrosigmseorigmofjsifgjfj"><i class="glyphicon glyphicon-list"></i> Show All</button>
+	</ion-content>
+ </ion-view>
