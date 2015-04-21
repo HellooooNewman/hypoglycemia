@@ -27,7 +27,9 @@ app.controller('LoginCtrl',['$scope', '$window','$location', 'UserAuthFactory', 
 						$window.sessionStorage.userId = data.user.uid;
 						//$window.sessionStorage.Cookie = data.session_name + data.sessid;
 							console.log($window.sessionStorage.userId);
-						$location.path("/tab/dash");
+						$scope.$apply(function() {
+							$location.path("/tab/dash");
+						});
 					}).error(function(status){
 						alert('Oops something went wrong');
 					});
